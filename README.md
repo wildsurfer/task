@@ -17,7 +17,7 @@ $ docker build -t task .
 ```
 ## Run:
 ```shell
-$ docker run -it --rm -p 5000:5000 kek .
+$ docker run -it --rm -p 5000:5000 task .
 $ curl "http://localhost:5000"
 ```
 ## Try:
