@@ -7,7 +7,7 @@ Combine the results and return them to the user.
 # The Solution
 
 ## Project structure
-The project structure is taken from the [set of common historical and emerging project layout patterns in the Go ecosystem](https://github.com/golang-standards/project-layout). It may look ambiguous for such a small project at it really worth it for bigger projects.  
+The project structure is taken from the [set of common historical and emerging project layout patterns in the Go ecosystem](https://github.com/golang-standards/project-layout). It may look ambiguous for such a small project but it really worth it for bigger projects.  
 
 ## Elapsed time
 It took me approx. **_one_** hour to build the first working version and **_three_** more hours to refactor the code. 
