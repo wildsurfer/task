@@ -1,11 +1,11 @@
 package task
 
-type Name struct {
+type name struct {
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 }
 
-type Joke struct {
+type joke struct {
 	Type  string `json:"type"`
 	Value struct {
 		ID         int      `json:"id"`

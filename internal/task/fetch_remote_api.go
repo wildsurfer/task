@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func fetchRandomName(cli *http.Client) (name Name, err error) {
+func fetchRandomName(cli *http.Client) (name name, err error) {
 	const endpoint = "https://names.mcquay.me/api/v0/"
 
 	body, fetchErr := fetch(cli, endpoint)
@@ -26,7 +26,7 @@ func fetchRandomName(cli *http.Client) (name Name, err error) {
 	return name, err
 }
 
-func fetchJoke(cli *http.Client, name Name) (joke Joke, err error) {
+func fetchJoke(cli *http.Client, name name) (joke joke, err error) {
 	endpoint := fmt.Sprintf(
 		"http://api.icndb.com/jokes/random?firstName=%s&lastName=%s",
 		name.FirstName,

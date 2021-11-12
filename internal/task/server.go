@@ -18,7 +18,7 @@ func httpClient() *http.Client {
 	return client
 }
 
-func RequestLogger(targetMux http.Handler) http.Handler {
+func requestLogger(targetMux http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
 
@@ -60,11 +60,12 @@ func httpHandler(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
+//ListenAndServe starts the server on port 5000
 func ListenAndServe() error {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", httpHandler)
 
-	logger := RequestLogger(mux)
+	logger := requestLogger(mux)
 	err := http.ListenAndServe(":5000", logger)
 
 	return fmt.Errorf("server error: %w", err)

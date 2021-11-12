@@ -6,8 +6,10 @@ Combine the results and return them to the user.
 
 # The Solution
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/wildsurfer/task?style=flat-square)](https://goreportcard.com/report/github.com/wildsurfer/task)
+
 ## Project structure
-The project structure is taken from the [set of common historical and emerging project layout patterns in the Go ecosystem](https://github.com/golang-standards/project-layout). It may look ambiguous for such a small project but it really worth it for bigger projects.  
+The project structure is taken from the [set of common historical and emerging project layout patterns in the Go ecosystem](https://github.com/wildsurfer/task). It may look ambiguous for such a small project butt it really worth it for bigger projects.  
 
 ## Elapsed time
 It took me approx. **_one_** hour to build the first working version and **_three_** more hours to refactor the code. 
