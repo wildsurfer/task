@@ -25,18 +25,17 @@ RUN adduser \
 WORKDIR /build
 
 # use modules
-COPY go.mod .
-#COPY go.sum .
+COPY . .
 
 RUN go mod download
 RUN go mod verify
 
 COPY . .
 
-RUN go test
+RUN go test ./...
 
 # Build the binary
-RUN GOOS=linux go build -ldflags="-linkmode external -extldflags -static" -a -o /build/app .
+RUN GOOS=linux go build -ldflags="-linkmode external -extldflags -static" -a -o /build/app ./cmd/task
 
 ############################
 # STEP 2 build a small image
